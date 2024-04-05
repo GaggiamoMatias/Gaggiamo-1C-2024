@@ -42,18 +42,11 @@ enum modo_de_funcionamiento
 	TOGGLE
 };
 
-enum numero_led
-{
-	LED_1,
-	LED_2,
-	LED_3
-};
-
 struct leds
 {
-	enum numero_led n_led;       // indica el número de led a controlar
+	uint8_t n_led;       // indica el número de led a controlar
 	uint8_t n_ciclos;  // indica la cantidad de ciclos de encendido/apagado
-	uint8_t periodo;   // indica el tiempo de cada ciclo
+	uint32_t periodo;   // indica el tiempo de cada ciclo
 	enum modo_de_funcionamiento mode;     //  ON, OFF, TOGGLE
 } my_leds; 
 
@@ -62,21 +55,33 @@ void funcionLeds(struct leds* x)
 {
 	if(x->mode == ON)
 	{
-		if(x->n_led == LED_1) LED_ON(LED_1);
-		else if(x->n_led == LED_2) LED_ON(LED_2);
-		else if(x->n_led == LED_3) LED_ON(LED_3);
+		if(x->n_led == 1) LedOn(LED_1);
+		else if(x->n_led == 2) LedOn(LED_2);
+		else if(x->n_led == 3) LedOn(LED_3);
 	}
 	else if(x->mode == OFF)
 	{
-		if(x->n_led == LED_1) LED_OFF(LED_1);
-		else if(x->n_led == LED_2) LED_OFF(LED_2);
-		else if(x->n_led == LED_3) LED_OFF(LED_3);
+		if(x->n_led == 1) LedOff(LED_1);
+		else if(x->n_led == 2) LedOff(LED_2);
+		else if(x->n_led == 3) LedOff(LED_3);
 	}
 	else if(x->mode == TOGGLE)
 	{
-		if(i < x->n_ciclos)
+		uint8_t i = 0;
+		while(i<x->n_ciclos)
+		{
+			if(x->n_led == 1) LedToggle(LED_1);
+			else if(x->n_led == 2) LedToggle(LED_2);
+			else if(x->n_led == 3) LedToggle(LED_3);
+			i++;
+			uint8_t j = 0;
+			while(j < x->periodo/100)
+			{
+				j++;
+				vTaskDelay(100 / portTICK_PERIOD_MS);
+			}
+		}
 	}
-
 }
 
 /*==================[external functions definition]==========================*/
@@ -85,12 +90,15 @@ void app_main(void)
 	struct leds x = my_leds;
 
 	LedsInit();
-	SwitchesInit();
 
-	while(1)
-	{
-		funcionLeds(&x);
-		vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
-	}
+	x.mode = TOGGLE;
+	x.n_ciclos = 100;
+	x.periodo = 500;
+	x.n_led = 3;
+
+    funcionLeds(&x);
+
+	
+	
 }
 /*==================[end of file]============================================*/
