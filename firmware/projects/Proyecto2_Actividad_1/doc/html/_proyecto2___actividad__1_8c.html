@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto2_Actividad_1: Referencia del archivo C:/Repositorios/Gaggiamo-1C-2024/firmware/projects/Proyecto2_Actividad_1/main/Proyecto2_Actividad_1.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto2_Actividad_1<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto2___actividad__1_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Proyecto2_Actividad_1.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+</div>
+<p><a href="_proyecto2___actividad__1_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a8698ca6500fc9bbde4c48e26a20a9249" id="r_a8698ca6500fc9bbde4c48e26a20a9249"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8698ca6500fc9bbde4c48e26a20a9249">CONFIG_PERIOD_MEASURE</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:a8698ca6500fc9bbde4c48e26a20a9249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95a7c01ea2c6d3a289934ae8729b535" id="r_ad95a7c01ea2c6d3a289934ae8729b535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95a7c01ea2c6d3a289934ae8729b535">CONFIG_PERIOD_SWITCH</a>&#160;&#160;&#160;40</td></tr>
+<tr class="separator:ad95a7c01ea2c6d3a289934ae8729b535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf52ab193412caa35d66b3348a19b76" id="r_a0cf52ab193412caa35d66b3348a19b76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cf52ab193412caa35d66b3348a19b76">CONFIG_PERIOD_SHOW</a>&#160;&#160;&#160;300</td></tr>
+<tr class="separator:a0cf52ab193412caa35d66b3348a19b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a4a4fa45c3ca466f059a1969080fb3833" id="r_a4a4fa45c3ca466f059a1969080fb3833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a4fa45c3ca466f059a1969080fb3833">MeasureTask</a> (void *pvParameter)</td></tr>
+<tr class="memdesc:a4a4fa45c3ca466f059a1969080fb3833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea encargada de medir continuamente la distancia utilizando el sensor de ultrasonido HC-SR04. La tarea se repite con un período definido por CONFIG_PERIOD_MEASURE.  <br /></td></tr>
+<tr class="separator:a4a4fa45c3ca466f059a1969080fb3833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf85b4ee9118ccdbc3e623b69f066316" id="r_adf85b4ee9118ccdbc3e623b69f066316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf85b4ee9118ccdbc3e623b69f066316">SwitchTask</a> (void *pvParameter)</td></tr>
+<tr class="memdesc:adf85b4ee9118ccdbc3e623b69f066316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea encargada de leer el estado de los interruptores y controlar la activación/desactivación de la medición (interruptor 1) y de mostrar o no mostrar la distancia en el LCD (interruptor 2). La tarea se repite con un período definido por CONFIG_PERIOD_SWITCH.  <br /></td></tr>
+<tr class="separator:adf85b4ee9118ccdbc3e623b69f066316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899cb4a77858df0897c65b6dabfb64c8" id="r_a899cb4a77858df0897c65b6dabfb64c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a899cb4a77858df0897c65b6dabfb64c8">ShowTask</a> (void *pvParameter)</td></tr>
+<tr class="memdesc:a899cb4a77858df0897c65b6dabfb64c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea encargada de actualizar la visualización en el display LCD y controlar el encendido/apagado de los LEDs según la distancia medida por el sensor HC-SR04:  <br /></td></tr>
+<tr class="separator:a899cb4a77858df0897c65b6dabfb64c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7ae9d3ad463ec7a0eb38ee23a15c51e7" id="r_a7ae9d3ad463ec7a0eb38ee23a15c51e7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ae9d3ad463ec7a0eb38ee23a15c51e7">distance</a> = 0</td></tr>
+<tr class="separator:a7ae9d3ad463ec7a0eb38ee23a15c51e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d773cce810cac80a2e10de941e2f26" id="r_ae7d773cce810cac80a2e10de941e2f26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7d773cce810cac80a2e10de941e2f26">mostrar</a> = true</td></tr>
+<tr class="separator:ae7d773cce810cac80a2e10de941e2f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750f32ce5c5bf53c0964f126de9d490f" id="r_a750f32ce5c5bf53c0964f126de9d490f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a750f32ce5c5bf53c0964f126de9d490f">medir</a> = true</td></tr>
+<tr class="separator:a750f32ce5c5bf53c0964f126de9d490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a8698ca6500fc9bbde4c48e26a20a9249" name="a8698ca6500fc9bbde4c48e26a20a9249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8698ca6500fc9bbde4c48e26a20a9249">&#9670;&#160;</a></span>CONFIG_PERIOD_MEASURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_MEASURE&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00040">40</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00054">MeasureTask()</a>.</p>
+
+</div>
+</div>
+<a id="a0cf52ab193412caa35d66b3348a19b76" name="a0cf52ab193412caa35d66b3348a19b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf52ab193412caa35d66b3348a19b76">&#9670;&#160;</a></span>CONFIG_PERIOD_SHOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_SHOW&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00042">42</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00095">ShowTask()</a>.</p>
+
+</div>
+</div>
+<a id="ad95a7c01ea2c6d3a289934ae8729b535" name="ad95a7c01ea2c6d3a289934ae8729b535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95a7c01ea2c6d3a289934ae8729b535">&#9670;&#160;</a></span>CONFIG_PERIOD_SWITCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_SWITCH&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00041">41</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00069">SwitchTask()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00132">132</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="hc__sr04_8c_source.html#l00034">HcSr04Init()</a>, <a class="el" href="lcditse0803_8c_source.html#l00037">LcdItsE0803Init()</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00054">MeasureTask()</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00095">ShowTask()</a>, <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00069">SwitchTask()</a>.</p>
+
+</div>
+</div>
+<a id="a4a4fa45c3ca466f059a1969080fb3833" name="a4a4fa45c3ca466f059a1969080fb3833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4fa45c3ca466f059a1969080fb3833">&#9670;&#160;</a></span>MeasureTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeasureTask </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea encargada de medir continuamente la distancia utilizando el sensor de ultrasonido HC-SR04. La tarea se repite con un período definido por CONFIG_PERIOD_MEASURE. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00054">54</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00040">CONFIG_PERIOD_MEASURE</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00045">distance</a>, <a class="el" href="hc__sr04_8c_source.html#l00045">HcSr04ReadDistanceInCentimeters()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00047">medir</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00132">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a899cb4a77858df0897c65b6dabfb64c8" name="a899cb4a77858df0897c65b6dabfb64c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899cb4a77858df0897c65b6dabfb64c8">&#9670;&#160;</a></span>ShowTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowTask </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea encargada de actualizar la visualización en el display LCD y controlar el encendido/apagado de los LEDs según la distancia medida por el sensor HC-SR04: </p>
+<ul>
+<li>distancia es menor a 10 cm, todos los LEDs se apagan.</li>
+<li>distancia está entre 10 y 20 cm, solo el LED_1 se enciende.</li>
+<li>distancia está entre 20 y 30 cm, los LEDs 1 y 2 se encienden.</li>
+<li>distancia es mayor a 30 cm, todos los LEDs se encienden. Además, la tarea verifica la variable global 'mostrar' y escribe la distancia en el LCD si está activada. La tarea se repite con un período definido por CONFIG_PERIOD_SHOW. </li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00095">95</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00042">CONFIG_PERIOD_SHOW</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00045">distance</a>, <a class="el" href="lcditse0803_8c_source.html#l00054">LcdItsE0803Write()</a>, <a class="el" href="led_8h_source.html#l00034">LED_1</a>, <a class="el" href="led_8h_source.html#l00033">LED_2</a>, <a class="el" href="led_8h_source.html#l00032">LED_3</a>, <a class="el" href="led_8c_source.html#l00065">LedOff()</a>, <a class="el" href="led_8c_source.html#l00046">LedOn()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00046">mostrar</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00132">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="adf85b4ee9118ccdbc3e623b69f066316" name="adf85b4ee9118ccdbc3e623b69f066316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf85b4ee9118ccdbc3e623b69f066316">&#9670;&#160;</a></span>SwitchTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SwitchTask </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea encargada de leer el estado de los interruptores y controlar la activación/desactivación de la medición (interruptor 1) y de mostrar o no mostrar la distancia en el LCD (interruptor 2). La tarea se repite con un período definido por CONFIG_PERIOD_SWITCH. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00069">69</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00041">CONFIG_PERIOD_SWITCH</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00047">medir</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00046">mostrar</a>, <a class="el" href="switch_8h_source.html#l00032">SWITCH_1</a>, <a class="el" href="switch_8h_source.html#l00033">SWITCH_2</a> y <a class="el" href="switch_8c_source.html#l00038">SwitchesRead()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00132">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a7ae9d3ad463ec7a0eb38ee23a15c51e7" name="a7ae9d3ad463ec7a0eb38ee23a15c51e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae9d3ad463ec7a0eb38ee23a15c51e7">&#9670;&#160;</a></span>distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t distance = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00045">45</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="hc__sr04_8c_source.html#l00045">HcSr04ReadDistanceInCentimeters()</a>, <a class="el" href="hc__sr04_8c_source.html#l00067">HcSr04ReadDistanceInInches()</a>, <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00054">MeasureTask()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00095">ShowTask()</a>.</p>
+
+</div>
+</div>
+<a id="a750f32ce5c5bf53c0964f126de9d490f" name="a750f32ce5c5bf53c0964f126de9d490f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750f32ce5c5bf53c0964f126de9d490f">&#9670;&#160;</a></span>medir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool medir = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00047">47</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00054">MeasureTask()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00069">SwitchTask()</a>.</p>
+
+</div>
+</div>
+<a id="ae7d773cce810cac80a2e10de941e2f26" name="ae7d773cce810cac80a2e10de941e2f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d773cce810cac80a2e10de941e2f26">&#9670;&#160;</a></span>mostrar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mostrar = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00046">46</a> del archivo <a class="el" href="_proyecto2___actividad__1_8c_source.html">Proyecto2_Actividad_1.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00095">ShowTask()</a> y <a class="el" href="_proyecto2___actividad__1_8c_source.html#l00069">SwitchTask()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_8c80e9c9e13c9759df76f70fac32e526.html">Gaggiamo-1C-2024</a></li><li class="navelem"><a class="el" href="dir_afed1d8076739dd758196f660fe62cae.html">firmware</a></li><li class="navelem"><a class="el" href="dir_497fe04a80b3bb951bd27af1e74cd047.html">projects</a></li><li class="navelem"><a class="el" href="dir_ba7a2c36b0dce21b1dc9318ccf071c4f.html">Proyecto2_Actividad_1</a></li><li class="navelem"><a class="el" href="dir_a32536f397d74080f632ca3f6a2d864b.html">main</a></li><li class="navelem"><a class="el" href="_proyecto2___actividad__1_8c.html">Proyecto2_Actividad_1.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
