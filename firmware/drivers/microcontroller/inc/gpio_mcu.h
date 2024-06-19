@@ -79,6 +79,13 @@ typedef enum gpio_list{
 
 /*==================[internal functions declaration]=========================*/
 /**
+ * @brief 
+ * 
+ * @param pin 
+ */
+void GPIOInOut(gpio_t pin, io_t io);
+
+/**
  * @brief GPIO initialization
  * 
  * @param pin GPIO number

@@ -64,6 +64,20 @@ gpio_flex_glitch_filter_config_t filter_config = {
 /*==================[internal functions definition]==========================*/
 
 /*==================[external functions definition]==========================*/
+void GPIOInOut(gpio_t pin, io_t io)
+{
+	if(io == GPIO_INPUT)
+	{
+		gpio_list[pin].mode = GPIO_MODE_INPUT;
+		gpio_set_direction(pin, io);
+	}
+	if(io == GPIO_OUTPUT)
+	{
+		gpio_list[pin].mode = GPIO_MODE_OUTPUT;
+		gpio_set_direction(pin, io);
+	}
+}
+
 void GPIOInit(gpio_t pin, io_t io){
 	if((pin == GPIO_14) || (pin > GPIO_23)){
 		return;
