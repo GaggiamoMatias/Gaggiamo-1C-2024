@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Repositorios/Gaggiamo-1C-2024/firmware/projects/Proyecto_Integrador/main/Proyecto_Integrador.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto___integrador_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Proyecto_Integrador.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_proyecto___integrador_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &quot;<a class="code" href="led_8h.html">led.h</a>&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#include &quot;buzzer.h&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#include &quot;<a class="code" href="timer__mcu_8h.html">timer_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &quot;<a class="code" href="uart__mcu_8h.html">uart_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &quot;dht11.h&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &quot;mq2.h&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="analog__io__mcu_8h.html">analog_io_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &quot;<a class="code" href="rfid__utils_8h.html">rfid_utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#include &quot;mfrc522.h&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#include &quot;<a class="code" href="servo__sg90_8h.html">servo_sg90.h</a>&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;Si7007.h&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a9a265a2fa8b8a1442be25098dec84dac">   76</a></span><span class="preprocessor">#define CONFIG_MEASURE_PERIOD 2000000</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a440e4a35d8c6e448851d42a56bde8f72">   80</a></span><span class="preprocessor">#define CONFIG_ALARM_PERIOD 1000</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#ac0b7d7cf0b923620e100e4884d361031">   84</a></span><span class="preprocessor">#define CONFIG_ACCESS_PERIOD 1000</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a04ed8efb76e0f173ffb339d6454780d9">   89</a></span><span class="preprocessor">#define OPER_DOOR_PERIOD 3000</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#afbea41f542642cc0a1d4121ed372a616">   93</a></span><span class="preprocessor">#define NUM_UIDS 3</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">/*==================[internal data definition]===============================*/</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#ac22ee0f4de1e8eb682232f04b2ac1e3c">   98</a></span>TaskHandle_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a91cadd7795814d666f7f16983fe929e0">  102</a></span>TaskHandle_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#a91cadd7795814d666f7f16983fe929e0">alarm_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a3157cb680d17c5021fdbef7dc61830c4">  106</a></span>TaskHandle_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#a3157cb680d17c5021fdbef7dc61830c4">access_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">  111</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">  115</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">  119</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">activarAlarma</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#ab3e3892fcc3a812d4589896af4a1c6af">  124</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#ab3e3892fcc3a812d4589896af4a1c6af">umbral_gas</a> = 25000; </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#aab2b619f95deff32a994a519bc390e80">  128</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#aab2b619f95deff32a994a519bc390e80">umbral_temp</a> = 100;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#aa5b3f7edb4c0d81c529828dd2a8b3cdf">  132</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#aa5b3f7edb4c0d81c529828dd2a8b3cdf">umbral_hum</a> = 100;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#abb37380e6d584843a7c0f51ff1249867">  137</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#abb37380e6d584843a7c0f51ff1249867">RO_</a> = 0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a14b27f30508aa42270da1be665629f9d">  141</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a14b27f30508aa42270da1be665629f9d">valor_gas</a> = 0;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">  145</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a> = 0; <span class="comment">// valor de gas butano convertido a entero.</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a24d61a35b72d7299eb6b5f48e71a571b">  150</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a24d61a35b72d7299eb6b5f48e71a571b">temp</a> = 0;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">  154</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a> = 0;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a38adb4de3d9d0391675c323d13503af7">  158</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a38adb4de3d9d0391675c323d13503af7">hum</a> = 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">  162</a></span>uint16_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">hum_converted</a> = 0;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a6465c2a35bd14b1d5c2f00a92e1b1b0e">  168</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_proyecto___integrador_8c.html#a6465c2a35bd14b1d5c2f00a92e1b1b0e">last_user_ID</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">  172</a></span>MFRC522Ptr_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="foldopen" id="foldopen00177" data-start="{" data-end="};">
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a31e9b93058bbe1db35570cd4c7c216af">  177</a></span>uint8_t <a class="code hl_variable" href="_proyecto___integrador_8c.html#a31e9b93058bbe1db35570cd4c7c216af">valid_uids</a>[<a class="code hl_define" href="_proyecto___integrador_8c.html#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a>][4] = </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    {0xd3, 0x1c, 0xe9, 0xfc},</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    {0Xf6, 0x84, 0x19, 0x9e},</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    {0x83, 0x33, 0xbd, 0xb}</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>};</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#a9b149a3af4eb3b2fe4364bbd4ebf2a49">inicializar</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#a5e3fcfe1a115bb84a2b24ded90471f10">validateUID</a>(uint8_t *uid, uint8_t size);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#afed848f114301c5e51f6458d180dc1dd">handleRFIDCard</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#afaccfed84cd1498a05ea04a65f1209b1">  210</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a>(<span class="keywordtype">void</span>* param)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>{</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    vTaskNotifyGiveFromISR(<a class="code hl_variable" href="_proyecto___integrador_8c.html#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a>, pdFALSE);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">static</span> <span class="keywordtype">void</span> measureTask(<span class="keywordtype">void</span> *pvParameter)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>{</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a24d61a35b72d7299eb6b5f48e71a571b">temp</a> = Si7007MeasureTemperature();</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a38adb4de3d9d0391675c323d13503af7">hum</a> = Si7007MeasureHumidity();</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a14b27f30508aa42270da1be665629f9d">valor_gas</a> = MQGetPercentage(MQRead()/<a class="code hl_variable" href="_proyecto___integrador_8c.html#abb37380e6d584843a7c0f51ff1249867">RO_</a>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a> = (uint16_t)(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a14b27f30508aa42270da1be665629f9d">valor_gas</a>*1000000);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a> = (uint16_t)(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a24d61a35b72d7299eb6b5f48e71a571b">temp</a>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">hum_converted</a> = (uint16_t)(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a38adb4de3d9d0391675c323d13503af7">hum</a>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\nTemperatura: &quot;</span>);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a>, 10));</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot; °C\r\n&quot;</span>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Humedad: &quot;</span>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">hum_converted</a>, 10));</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;%\r\n&quot;</span>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Concentracion de gas: &quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a>, 10));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot; ppm.\r\n&quot;</span>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a> &gt;= <a class="code hl_variable" href="_proyecto___integrador_8c.html#aab2b619f95deff32a994a519bc390e80">umbral_temp</a> || <a class="code hl_variable" href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">hum_converted</a> &gt;= <a class="code hl_variable" href="_proyecto___integrador_8c.html#aa5b3f7edb4c0d81c529828dd2a8b3cdf">umbral_hum</a> || <a class="code hl_variable" href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a> &gt;= <a class="code hl_variable" href="_proyecto___integrador_8c.html#ab3e3892fcc3a812d4589896af4a1c6af">umbral_gas</a>)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <a class="code hl_variable" href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">activarAlarma</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <a class="code hl_variable" href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <a class="code hl_variable" href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">activarAlarma</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <a class="code hl_variable" href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>}</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keyword">static</span> <span class="keywordtype">void</span> alarmTask(<span class="keywordtype">void</span> *pvParameter)</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>{</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">bool</span> encender_buzzer = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">activarAlarma</a>)</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <a class="code hl_function" href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a>(<a class="code hl_enumvalue" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a>);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <a class="code hl_function" href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a>(<a class="code hl_enumvalue" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41">LED_2</a>);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <a class="code hl_function" href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a>(<a class="code hl_enumvalue" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3">LED_3</a>);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">if</span>(encender_buzzer)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                <span class="comment">//GPIOOn(GPIO_8);</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                <span class="comment">//BuzzerPlayTone(4000,750);</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                encender_buzzer = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                <span class="comment">//GPIOOff(GPIO_8);</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="comment">//BuzzerOff();</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                encender_buzzer = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <a class="code hl_function" href="group___l_e_d.html#gafcc4fefa23689ea53feedb349c8a9eb6">LedsOffAll</a>();</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            <span class="comment">//GPIOOff(GPIO_8);</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="comment">//BuzzerOff();</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            encender_buzzer = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        vTaskDelay(<a class="code hl_define" href="_proyecto___integrador_8c.html#a440e4a35d8c6e448851d42a56bde8f72">CONFIG_ALARM_PERIOD</a>/portTICK_PERIOD_MS);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keyword">static</span> <span class="keywordtype">void</span> accessTask(<span class="keywordtype">void</span> *pvParameter)</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot;Inicializando control de acceso.\r\n&quot;</span>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    {</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keywordflow">if</span> (PICC_IsNewCardPresent(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>)) </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="keywordflow">if</span> (PICC_ReadCardSerial(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>)) </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                <a class="code hl_function" href="_proyecto___integrador_8c.html#afed848f114301c5e51f6458d180dc1dd">handleRFIDCard</a>();</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a>)</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                    <a class="code hl_function" href="group___s_e_r_v_o.html#gac63abba15fdb98a070e8da53d87cd80d">ServoMove</a>(<a class="code hl_enumvalue" href="group___s_e_r_v_o.html#gga7d2476d006aaacd66b6795d84541a02fae55d97065021a1ed543b21c04e6b48cb">SERVO_0</a>, -90);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    <a class="code hl_function" href="group___l_e_d.html#ga883021aaef65f080a52b1852172ecbc3">LedOn</a>(<a class="code hl_enumvalue" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a>);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    vTaskDelay(<a class="code hl_define" href="_proyecto___integrador_8c.html#a04ed8efb76e0f173ffb339d6454780d9">OPER_DOOR_PERIOD</a> / portTICK_PERIOD_MS);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                    <a class="code hl_function" href="group___s_e_r_v_o.html#gac63abba15fdb98a070e8da53d87cd80d">ServoMove</a>(<a class="code hl_enumvalue" href="group___s_e_r_v_o.html#gga7d2476d006aaacd66b6795d84541a02fae55d97065021a1ed543b21c04e6b48cb">SERVO_0</a>, 0);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                    <a class="code hl_function" href="group___l_e_d.html#ga4fd07c9f7fab15d0d07389a38f4a39d8">LedOff</a>(<a class="code hl_enumvalue" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a>);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    <a class="code hl_variable" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        }</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        vTaskDelay(<a class="code hl_define" href="_proyecto___integrador_8c.html#ac0b7d7cf0b923620e100e4884d361031">CONFIG_ACCESS_PERIOD</a> / portTICK_PERIOD_MS);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>}</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="foldopen" id="foldopen00345" data-start="{" data-end="}">
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  345</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>{</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <a class="code hl_function" href="_proyecto___integrador_8c.html#a9b149a3af4eb3b2fe4364bbd4ebf2a49">inicializar</a>();</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_struct" href="structtimer__config__t.html">timer_config_t</a> timer_measure = </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        .<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a> = <a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a>,</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        .period = <a class="code hl_define" href="_proyecto___integrador_8c.html#a9a265a2fa8b8a1442be25098dec84dac">CONFIG_MEASURE_PERIOD</a>,</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        .func_p = <a class="code hl_function" href="_proyecto___integrador_8c.html#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a>,</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    };</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_function" href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a>(&amp;timer_measure);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    xTaskCreate(&amp;measureTask, <span class="stringliteral">&quot;MEASURE&quot;</span>, 4096, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_proyecto___integrador_8c.html#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a>);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    xTaskCreate(&amp;alarmTask, <span class="stringliteral">&quot;ALARM&quot;</span>, 1024, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_proyecto___integrador_8c.html#a91cadd7795814d666f7f16983fe929e0">alarm_task_handle</a>);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    xTaskCreate(&amp;accessTask, <span class="stringliteral">&quot;ACCESS&quot;</span>, 1024, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_proyecto___integrador_8c.html#a3157cb680d17c5021fdbef7dc61830c4">access_task_handle</a>);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <a class="code hl_function" href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a>(timer_measure.<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a>);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}</div>
+</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="foldopen" id="foldopen00365" data-start="{" data-end="}">
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a9b149a3af4eb3b2fe4364bbd4ebf2a49">  365</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#a9b149a3af4eb3b2fe4364bbd4ebf2a49">inicializar</a>()</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>{</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    printf(<span class="stringliteral">&quot;INICIALIZO\n&quot;</span>);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    MQInit(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a086256647dcbd93f77f55f1da9bb443e">GPIO_0</a>);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <a class="code hl_function" href="group___l_e_d.html#gacba669c3e8f52e45d1bea50c2e63b250">LedsInit</a>();</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <a class="code hl_function" href="group___s_e_r_v_o.html#gad3b35d6ee8bdf69b0cceac96862fa8e7">ServoInit</a>(<a class="code hl_enumvalue" href="group___s_e_r_v_o.html#gga7d2476d006aaacd66b6795d84541a02fae55d97065021a1ed543b21c04e6b48cb">SERVO_0</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a426d08ab85ab3aebbb53eed1a32dfb71">GPIO_3</a>);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Calibrando...\n&quot;</span>);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <a class="code hl_variable" href="_proyecto___integrador_8c.html#abb37380e6d584843a7c0f51ff1249867">RO_</a> = MQCalibration();</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Calibracion finalizada!\n&quot;</span>);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <a class="code hl_struct" href="structserial__config__t.html">serial_config_t</a> my_uart =</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    {</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        .<a class="code hl_variable" href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">port</a> = <a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        .baud_rate = 115200,</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        .func_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    };</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a>(&amp;my_uart);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    Si7007_config sensorTempHum =</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    {</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        .select = <a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a>,</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        .PWM_1 = <a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8595f8d7a0ae611fb06e4b9c690295f3">GPIO_1</a>,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        .PWM_2 = <a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393abbea21b656f1917800d9d279b685f38e">GPIO_2</a></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    };</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    Si7007Init(&amp;sensorTempHum);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    setupRFID(&amp;<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>}</div>
+</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
+<div class="foldopen" id="foldopen00397" data-start="{" data-end="}">
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#afed848f114301c5e51f6458d180dc1dd">  397</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#afed848f114301c5e51f6458d180dc1dd">handleRFIDCard</a>() </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>{</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="comment">//  show card UID</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot;\nCard uid bytes: &quot;</span>);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; <a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.size; i++) </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    {</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot; 0X&quot;</span>);</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keywordtype">char</span>*)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte[i], 16));</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    }</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="comment">// Convert the uid bytes to an integer, byte[0] is the MSB</span></div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <a class="code hl_variable" href="_proyecto___integrador_8c.html#a6465c2a35bd14b1d5c2f00a92e1b1b0e">last_user_ID</a> =</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        (int)<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte[3] |</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        (<span class="keywordtype">int</span>)<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte[2] &lt;&lt; 8 |</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        (int)<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte[1] &lt;&lt; 16 |</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        (<span class="keywordtype">int</span>)<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte[0] &lt;&lt; 24;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot;Card Read user ID: &quot;</span>);</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keywordtype">char</span>*)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a6465c2a35bd14b1d5c2f00a92e1b1b0e">last_user_ID</a>, 10));</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,<span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="comment">// Validate the UID</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="_proyecto___integrador_8c.html#a5e3fcfe1a115bb84a2b24ded90471f10">validateUID</a>(<a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.uidByte, <a class="code hl_variable" href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a>-&gt;uid.size) &amp;&amp; <a class="code hl_variable" href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a>)</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    {</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\nAccess Granted\n\r&quot;</span>);</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a> = <span class="keyword">true</span>; <span class="comment">// Permitir acceso</span></div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    }</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    {</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\nAccess Denied\n\r&quot;</span>);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <a class="code hl_variable" href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a> = <span class="keyword">false</span>; <span class="comment">// Denegar acceso</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>}</div>
+</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="foldopen" id="foldopen00433" data-start="{" data-end="}">
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno"><a class="line" href="_proyecto___integrador_8c.html#a5e3fcfe1a115bb84a2b24ded90471f10">  433</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="_proyecto___integrador_8c.html#a5e3fcfe1a115bb84a2b24ded90471f10">validateUID</a>(uint8_t *uid, uint8_t size)</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>{</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="_proyecto___integrador_8c.html#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a>; i++) </div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    {</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>        <span class="keywordflow">if</span> (memcmp(uid, <a class="code hl_variable" href="_proyecto___integrador_8c.html#a31e9b93058bbe1db35570cd4c7c216af">valid_uids</a>[i], size) == 0) </div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        {</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        }</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    }</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>}</div>
+</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a04ed8efb76e0f173ffb339d6454780d9"><div class="ttname"><a href="_proyecto___integrador_8c.html#a04ed8efb76e0f173ffb339d6454780d9">OPER_DOOR_PERIOD</a></div><div class="ttdeci">#define OPER_DOOR_PERIOD</div><div class="ttdoc">Tiempo de operación de la puerta en milisegundos.</div><div class="ttdef"><b>Definition</b> <a href="#l00089">Proyecto_Integrador.c:89</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a09604b37633c4ffe96c2472288adcada"><div class="ttname"><a href="_proyecto___integrador_8c.html#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a></div><div class="ttdeci">uint16_t valor_gas_convertido</div><div class="ttdoc">Valor de gas butano convertido a entero.</div><div class="ttdef"><b>Definition</b> <a href="#l00145">Proyecto_Integrador.c:145</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a14b27f30508aa42270da1be665629f9d"><div class="ttname"><a href="_proyecto___integrador_8c.html#a14b27f30508aa42270da1be665629f9d">valor_gas</a></div><div class="ttdeci">float valor_gas</div><div class="ttdoc">Valor de gas butano medido.</div><div class="ttdef"><b>Definition</b> <a href="#l00141">Proyecto_Integrador.c:141</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a24d61a35b72d7299eb6b5f48e71a571b"><div class="ttname"><a href="_proyecto___integrador_8c.html#a24d61a35b72d7299eb6b5f48e71a571b">temp</a></div><div class="ttdeci">float temp</div><div class="ttdoc">Valor de temperatura medido.</div><div class="ttdef"><b>Definition</b> <a href="#l00150">Proyecto_Integrador.c:150</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a3157cb680d17c5021fdbef7dc61830c4"><div class="ttname"><a href="_proyecto___integrador_8c.html#a3157cb680d17c5021fdbef7dc61830c4">access_task_handle</a></div><div class="ttdeci">TaskHandle_t access_task_handle</div><div class="ttdoc">Handle para la tarea de acceso.</div><div class="ttdef"><b>Definition</b> <a href="#l00106">Proyecto_Integrador.c:106</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a31e9b93058bbe1db35570cd4c7c216af"><div class="ttname"><a href="_proyecto___integrador_8c.html#a31e9b93058bbe1db35570cd4c7c216af">valid_uids</a></div><div class="ttdeci">uint8_t valid_uids[NUM_UIDS][4]</div><div class="ttdoc">UIDs válidos para acceso.</div><div class="ttdef"><b>Definition</b> <a href="#l00177">Proyecto_Integrador.c:177</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a38adb4de3d9d0391675c323d13503af7"><div class="ttname"><a href="_proyecto___integrador_8c.html#a38adb4de3d9d0391675c323d13503af7">hum</a></div><div class="ttdeci">float hum</div><div class="ttdoc">Valor de humedad medido.</div><div class="ttdef"><b>Definition</b> <a href="#l00158">Proyecto_Integrador.c:158</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a440e4a35d8c6e448851d42a56bde8f72"><div class="ttname"><a href="_proyecto___integrador_8c.html#a440e4a35d8c6e448851d42a56bde8f72">CONFIG_ALARM_PERIOD</a></div><div class="ttdeci">#define CONFIG_ALARM_PERIOD</div><div class="ttdoc">Período de chequeo de la alarma en milisegundos.</div><div class="ttdef"><b>Definition</b> <a href="#l00080">Proyecto_Integrador.c:80</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a5cc6f8c9074d12d7a44aeb7120c8e2d1"><div class="ttname"><a href="_proyecto___integrador_8c.html#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a></div><div class="ttdeci">bool permisoPuerta</div><div class="ttdoc">Indica si la puerta puede ser abierta o no.</div><div class="ttdef"><b>Definition</b> <a href="#l00111">Proyecto_Integrador.c:111</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a5e3fcfe1a115bb84a2b24ded90471f10"><div class="ttname"><a href="_proyecto___integrador_8c.html#a5e3fcfe1a115bb84a2b24ded90471f10">validateUID</a></div><div class="ttdeci">bool validateUID(uint8_t *uid, uint8_t size)</div><div class="ttdoc">Valida un UID de tarjeta RFID.</div><div class="ttdef"><b>Definition</b> <a href="#l00433">Proyecto_Integrador.c:433</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="_proyecto___integrador_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00345">Proyecto_Integrador.c:345</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a6465c2a35bd14b1d5c2f00a92e1b1b0e"><div class="ttname"><a href="_proyecto___integrador_8c.html#a6465c2a35bd14b1d5c2f00a92e1b1b0e">last_user_ID</a></div><div class="ttdeci">unsigned int last_user_ID</div><div class="ttdoc">Último ID de usuario leído.</div><div class="ttdef"><b>Definition</b> <a href="#l00168">Proyecto_Integrador.c:168</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a7fa110ec28a27f16556a13c723b22901"><div class="ttname"><a href="_proyecto___integrador_8c.html#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a></div><div class="ttdeci">MFRC522Ptr_t mfrcInstance</div><div class="ttdoc">Instancia del lector RFID.</div><div class="ttdef"><b>Definition</b> <a href="#l00172">Proyecto_Integrador.c:172</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a91cadd7795814d666f7f16983fe929e0"><div class="ttname"><a href="_proyecto___integrador_8c.html#a91cadd7795814d666f7f16983fe929e0">alarm_task_handle</a></div><div class="ttdeci">TaskHandle_t alarm_task_handle</div><div class="ttdoc">Handle para la tarea de alarma.</div><div class="ttdef"><b>Definition</b> <a href="#l00102">Proyecto_Integrador.c:102</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a9a265a2fa8b8a1442be25098dec84dac"><div class="ttname"><a href="_proyecto___integrador_8c.html#a9a265a2fa8b8a1442be25098dec84dac">CONFIG_MEASURE_PERIOD</a></div><div class="ttdeci">#define CONFIG_MEASURE_PERIOD</div><div class="ttdoc">Período de medición en microsegundos.</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Proyecto_Integrador.c:76</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a9b149a3af4eb3b2fe4364bbd4ebf2a49"><div class="ttname"><a href="_proyecto___integrador_8c.html#a9b149a3af4eb3b2fe4364bbd4ebf2a49">inicializar</a></div><div class="ttdeci">void inicializar()</div><div class="ttdoc">Inicializa los componentes del sistema.</div><div class="ttdef"><b>Definition</b> <a href="#l00365">Proyecto_Integrador.c:365</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_a9d497618c58fb371e825af20bd843487"><div class="ttname"><a href="_proyecto___integrador_8c.html#a9d497618c58fb371e825af20bd843487">abrirPuerta</a></div><div class="ttdeci">bool abrirPuerta</div><div class="ttdoc">Indica si se debe abrir la puerta o no.</div><div class="ttdef"><b>Definition</b> <a href="#l00115">Proyecto_Integrador.c:115</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_aa5b3f7edb4c0d81c529828dd2a8b3cdf"><div class="ttname"><a href="_proyecto___integrador_8c.html#aa5b3f7edb4c0d81c529828dd2a8b3cdf">umbral_hum</a></div><div class="ttdeci">uint16_t umbral_hum</div><div class="ttdoc">Umbral de humedad.</div><div class="ttdef"><b>Definition</b> <a href="#l00132">Proyecto_Integrador.c:132</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_aab2b619f95deff32a994a519bc390e80"><div class="ttname"><a href="_proyecto___integrador_8c.html#aab2b619f95deff32a994a519bc390e80">umbral_temp</a></div><div class="ttdeci">uint16_t umbral_temp</div><div class="ttdoc">Umbral de temperatura.</div><div class="ttdef"><b>Definition</b> <a href="#l00128">Proyecto_Integrador.c:128</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_ab3e3892fcc3a812d4589896af4a1c6af"><div class="ttname"><a href="_proyecto___integrador_8c.html#ab3e3892fcc3a812d4589896af4a1c6af">umbral_gas</a></div><div class="ttdeci">uint16_t umbral_gas</div><div class="ttdoc">Umbral de concentración de gas butano.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">Proyecto_Integrador.c:124</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_abb37380e6d584843a7c0f51ff1249867"><div class="ttname"><a href="_proyecto___integrador_8c.html#abb37380e6d584843a7c0f51ff1249867">RO_</a></div><div class="ttdeci">uint16_t RO_</div><div class="ttdoc">Resistencia R0 en aire en condiciones normales del sensor MQ2.</div><div class="ttdef"><b>Definition</b> <a href="#l00137">Proyecto_Integrador.c:137</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_abf120a0718f2ea1552efadd7eebbf2d1"><div class="ttname"><a href="_proyecto___integrador_8c.html#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a></div><div class="ttdeci">uint16_t temp_converted</div><div class="ttdoc">Valor de temperatura convertido a entero.</div><div class="ttdef"><b>Definition</b> <a href="#l00154">Proyecto_Integrador.c:154</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_ac0b7d7cf0b923620e100e4884d361031"><div class="ttname"><a href="_proyecto___integrador_8c.html#ac0b7d7cf0b923620e100e4884d361031">CONFIG_ACCESS_PERIOD</a></div><div class="ttdeci">#define CONFIG_ACCESS_PERIOD</div><div class="ttdoc">Período de chequeo del acceso en milisegundos.</div><div class="ttdef"><b>Definition</b> <a href="#l00084">Proyecto_Integrador.c:84</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_ac22ee0f4de1e8eb682232f04b2ac1e3c"><div class="ttname"><a href="_proyecto___integrador_8c.html#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a></div><div class="ttdeci">TaskHandle_t measure_task_handle</div><div class="ttdoc">Handle para la tarea de medición.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">Proyecto_Integrador.c:98</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_ac4889be39481b89478b39b91317363ad"><div class="ttname"><a href="_proyecto___integrador_8c.html#ac4889be39481b89478b39b91317363ad">activarAlarma</a></div><div class="ttdeci">bool activarAlarma</div><div class="ttdoc">Indica si la alarma debe ser activada o no.</div><div class="ttdef"><b>Definition</b> <a href="#l00119">Proyecto_Integrador.c:119</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_ad0012d923808b21e355ddc6780462b75"><div class="ttname"><a href="_proyecto___integrador_8c.html#ad0012d923808b21e355ddc6780462b75">hum_converted</a></div><div class="ttdeci">uint16_t hum_converted</div><div class="ttdoc">Valor de humedad convertido a entero.</div><div class="ttdef"><b>Definition</b> <a href="#l00162">Proyecto_Integrador.c:162</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_afaccfed84cd1498a05ea04a65f1209b1"><div class="ttname"><a href="_proyecto___integrador_8c.html#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a></div><div class="ttdeci">void FuncTimerA(void *param)</div><div class="ttdoc">Función invocada en la interrupción del timer para la medición de concentración de gas,...</div><div class="ttdef"><b>Definition</b> <a href="#l00210">Proyecto_Integrador.c:210</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_afbea41f542642cc0a1d4121ed372a616"><div class="ttname"><a href="_proyecto___integrador_8c.html#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a></div><div class="ttdeci">#define NUM_UIDS</div><div class="ttdoc">Número de UIDs válidos para acceso.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">Proyecto_Integrador.c:93</a></div></div>
+<div class="ttc" id="a_proyecto___integrador_8c_html_afed848f114301c5e51f6458d180dc1dd"><div class="ttname"><a href="_proyecto___integrador_8c.html#afed848f114301c5e51f6458d180dc1dd">handleRFIDCard</a></div><div class="ttdeci">void handleRFIDCard()</div><div class="ttdoc">Maneja la lectura de una tarjeta/tag:</div><div class="ttdef"><b>Definition</b> <a href="#l00397">Proyecto_Integrador.c:397</a></div></div>
+<div class="ttc" id="aanalog__io__mcu_8h_html"><div class="ttname"><a href="analog__io__mcu_8h.html">analog_io_mcu.h</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a086256647dcbd93f77f55f1da9bb443e"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a086256647dcbd93f77f55f1da9bb443e">GPIO_0</a></div><div class="ttdeci">@ GPIO_0</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00052">gpio_mcu.h:52</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a426d08ab85ab3aebbb53eed1a32dfb71"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a426d08ab85ab3aebbb53eed1a32dfb71">GPIO_3</a></div><div class="ttdeci">@ GPIO_3</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00055">gpio_mcu.h:55</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a></div><div class="ttdeci">@ GPIO_23</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00075">gpio_mcu.h:75</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a8595f8d7a0ae611fb06e4b9c690295f3"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8595f8d7a0ae611fb06e4b9c690295f3">GPIO_1</a></div><div class="ttdeci">@ GPIO_1</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00053">gpio_mcu.h:53</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393abbea21b656f1917800d9d279b685f38e"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393abbea21b656f1917800d9d279b685f38e">GPIO_2</a></div><div class="ttdeci">@ GPIO_2</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00054">gpio_mcu.h:54</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ga4fd07c9f7fab15d0d07389a38f4a39d8"><div class="ttname"><a href="group___l_e_d.html#ga4fd07c9f7fab15d0d07389a38f4a39d8">LedOff</a></div><div class="ttdeci">uint8_t LedOff(led_t led)</div><div class="ttdoc">Turn off a specific LED.</div><div class="ttdef"><b>Definition</b> <a href="led_8c_source.html#l00065">led.c:65</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ga787ec5815e0eb2680bf1845562731beb"><div class="ttname"><a href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a></div><div class="ttdeci">uint8_t LedToggle(led_t led)</div><div class="ttdoc">Invert a specific LED state.</div><div class="ttdef"><b>Definition</b> <a href="led_8c_source.html#l00084">led.c:84</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ga883021aaef65f080a52b1852172ecbc3"><div class="ttname"><a href="group___l_e_d.html#ga883021aaef65f080a52b1852172ecbc3">LedOn</a></div><div class="ttdeci">uint8_t LedOn(led_t led)</div><div class="ttdoc">Turn on a specific LED.</div><div class="ttdef"><b>Definition</b> <a href="led_8c_source.html#l00046">led.c:46</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_gacba669c3e8f52e45d1bea50c2e63b250"><div class="ttname"><a href="group___l_e_d.html#gacba669c3e8f52e45d1bea50c2e63b250">LedsInit</a></div><div class="ttdeci">uint8_t LedsInit(void)</div><div class="ttdoc">ESP-EDU LEDs initialization.</div><div class="ttdef"><b>Definition</b> <a href="led_8c_source.html#l00031">led.c:31</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_gafcc4fefa23689ea53feedb349c8a9eb6"><div class="ttname"><a href="group___l_e_d.html#gafcc4fefa23689ea53feedb349c8a9eb6">LedsOffAll</a></div><div class="ttdeci">uint8_t LedsOffAll(void)</div><div class="ttdoc">Turn off all LEDs.</div><div class="ttdef"><b>Definition</b> <a href="led_8c_source.html#l00105">led.c:105</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41"><div class="ttname"><a href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41">LED_2</a></div><div class="ttdeci">@ LED_2</div><div class="ttdef"><b>Definition</b> <a href="led_8h_source.html#l00033">led.h:33</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b"><div class="ttname"><a href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a></div><div class="ttdeci">@ LED_1</div><div class="ttdef"><b>Definition</b> <a href="led_8h_source.html#l00034">led.h:34</a></div></div>
+<div class="ttc" id="agroup___l_e_d_html_ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3"><div class="ttname"><a href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3">LED_3</a></div><div class="ttdeci">@ LED_3</div><div class="ttdef"><b>Definition</b> <a href="led_8h_source.html#l00032">led.h:32</a></div></div>
+<div class="ttc" id="agroup___s_e_r_v_o_html_gac63abba15fdb98a070e8da53d87cd80d"><div class="ttname"><a href="group___s_e_r_v_o.html#gac63abba15fdb98a070e8da53d87cd80d">ServoMove</a></div><div class="ttdeci">void ServoMove(servo_out_t servo, int8_t ang)</div><div class="ttdoc">Change servo angle.</div><div class="ttdef"><b>Definition</b> <a href="servo__sg90_8c_source.html#l00051">servo_sg90.c:51</a></div></div>
+<div class="ttc" id="agroup___s_e_r_v_o_html_gad3b35d6ee8bdf69b0cceac96862fa8e7"><div class="ttname"><a href="group___s_e_r_v_o.html#gad3b35d6ee8bdf69b0cceac96862fa8e7">ServoInit</a></div><div class="ttdeci">uint8_t ServoInit(servo_out_t servo, gpio_t gpio)</div><div class="ttdoc">Servo initialization.</div><div class="ttdef"><b>Definition</b> <a href="servo__sg90_8c_source.html#l00033">servo_sg90.c:33</a></div></div>
+<div class="ttc" id="agroup___s_e_r_v_o_html_gga7d2476d006aaacd66b6795d84541a02fae55d97065021a1ed543b21c04e6b48cb"><div class="ttname"><a href="group___s_e_r_v_o.html#gga7d2476d006aaacd66b6795d84541a02fae55d97065021a1ed543b21c04e6b48cb">SERVO_0</a></div><div class="ttdeci">@ SERVO_0</div><div class="ttdef"><b>Definition</b> <a href="servo__sg90_8h_source.html#l00032">servo_sg90.h:32</a></div></div>
+<div class="ttc" id="agroup___timer_html_ga0b1779c5b8f91cc83c8bfd127071ea2f"><div class="ttname"><a href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a></div><div class="ttdeci">void TimerStart(timer_mcu_t timer)</div><div class="ttdoc">Start timer count.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00110">timer_mcu.c:110</a></div></div>
+<div class="ttc" id="agroup___timer_html_gae8617c0d176463a60441464ad26563f6"><div class="ttname"><a href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a></div><div class="ttdeci">void TimerInit(timer_config_t *timer_ini)</div><div class="ttdoc">Timer initialization.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00055">timer_mcu.c:55</a></div></div>
+<div class="ttc" id="agroup___timer_html_ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598"><div class="ttname"><a href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a></div><div class="ttdeci">@ TIMER_A</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00032">timer_mcu.h:32</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga00c7e785d2874c52bab6e4dba88a5e23"><div class="ttname"><a href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a></div><div class="ttdeci">uint8_t * UartItoa(uint32_t val, uint8_t base)</div><div class="ttdoc">Convert a number to a String (char array ended with '\0')</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00222">uart_mcu.c:222</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga440f6a03dfd8b310f5fdf42c3bf20c42"><div class="ttname"><a href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a></div><div class="ttdeci">void UartInit(serial_config_t *port_config)</div><div class="ttdoc">Serial port initialization.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00107">uart_mcu.c:107</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga60db217694ea24ad75fcedda3336a3a8"><div class="ttname"><a href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a></div><div class="ttdeci">void UartSendString(uart_mcu_port_t port, const char *msg)</div><div class="ttdoc">Send a String trough serial port.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00193">uart_mcu.c:193</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056"><div class="ttname"><a href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a></div><div class="ttdeci">@ UART_PC</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00032">uart_mcu.h:32</a></div></div>
+<div class="ttc" id="aili9341_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="ili9341_8c_source.html#l00042">ili9341.c:42</a></div></div>
+<div class="ttc" id="aled_8h_html"><div class="ttname"><a href="led_8h.html">led.h</a></div></div>
+<div class="ttc" id="arfid__utils_8h_html"><div class="ttname"><a href="rfid__utils_8h.html">rfid_utils.h</a></div></div>
+<div class="ttc" id="aservo__sg90_8h_html"><div class="ttname"><a href="servo__sg90_8h.html">servo_sg90.h</a></div></div>
+<div class="ttc" id="astructserial__config__t_html"><div class="ttname"><a href="structserial__config__t.html">serial_config_t</a></div><div class="ttdoc">Serial port configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00038">uart_mcu.h:38</a></div></div>
+<div class="ttc" id="astructserial__config__t_html_a27067c816e8c5402c7be0da9780678b0"><div class="ttname"><a href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">serial_config_t::port</a></div><div class="ttdeci">uart_mcu_port_t port</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00039">uart_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html"><div class="ttname"><a href="structtimer__config__t.html">timer_config_t</a></div><div class="ttdoc">Timer configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00039">timer_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html_ab83043b8038c5e630f6a2a05ea007e49"><div class="ttname"><a href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer_config_t::timer</a></div><div class="ttdeci">timer_mcu_t timer</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00040">timer_mcu.h:40</a></div></div>
+<div class="ttc" id="atimer__mcu_8h_html"><div class="ttname"><a href="timer__mcu_8h.html">timer_mcu.h</a></div></div>
+<div class="ttc" id="auart__mcu_8h_html"><div class="ttname"><a href="uart__mcu_8h.html">uart_mcu.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_8c80e9c9e13c9759df76f70fac32e526.html">Gaggiamo-1C-2024</a></li><li class="navelem"><a class="el" href="dir_afed1d8076739dd758196f660fe62cae.html">firmware</a></li><li class="navelem"><a class="el" href="dir_497fe04a80b3bb951bd27af1e74cd047.html">projects</a></li><li class="navelem"><a class="el" href="dir_54bb6f1e1d661b43255fd759e0953a2c.html">Proyecto_Integrador</a></li><li class="navelem"><a class="el" href="dir_df3ee2a240bf1d1a86a4a644372fb15b.html">main</a></li><li class="navelem"><a class="el" href="_proyecto___integrador_8c.html">Proyecto_Integrador.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

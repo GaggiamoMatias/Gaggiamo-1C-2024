@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Repositorios/Gaggiamo-1C-2024/firmware/projects/Proyecto_Integrador/main/Proyecto_Integrador.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto___integrador_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Proyecto_Integrador.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;buzzer.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;dht11.h&quot;</code><br />
+<code>#include &quot;mq2.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rfid__utils_8h_source.html">rfid_utils.h</a>&quot;</code><br />
+<code>#include &quot;mfrc522.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="servo__sg90_8h_source.html">servo_sg90.h</a>&quot;</code><br />
+<code>#include &quot;Si7007.h&quot;</code><br />
+</div>
+<p><a href="_proyecto___integrador_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9a265a2fa8b8a1442be25098dec84dac" id="r_a9a265a2fa8b8a1442be25098dec84dac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a265a2fa8b8a1442be25098dec84dac">CONFIG_MEASURE_PERIOD</a>&#160;&#160;&#160;2000000</td></tr>
+<tr class="memdesc:a9a265a2fa8b8a1442be25098dec84dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período de medición en microsegundos.  <br /></td></tr>
+<tr class="separator:a9a265a2fa8b8a1442be25098dec84dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440e4a35d8c6e448851d42a56bde8f72" id="r_a440e4a35d8c6e448851d42a56bde8f72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a440e4a35d8c6e448851d42a56bde8f72">CONFIG_ALARM_PERIOD</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:a440e4a35d8c6e448851d42a56bde8f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período de chequeo de la alarma en milisegundos.  <br /></td></tr>
+<tr class="separator:a440e4a35d8c6e448851d42a56bde8f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b7d7cf0b923620e100e4884d361031" id="r_ac0b7d7cf0b923620e100e4884d361031"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b7d7cf0b923620e100e4884d361031">CONFIG_ACCESS_PERIOD</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:ac0b7d7cf0b923620e100e4884d361031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período de chequeo del acceso en milisegundos.  <br /></td></tr>
+<tr class="separator:ac0b7d7cf0b923620e100e4884d361031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ed8efb76e0f173ffb339d6454780d9" id="r_a04ed8efb76e0f173ffb339d6454780d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ed8efb76e0f173ffb339d6454780d9">OPER_DOOR_PERIOD</a>&#160;&#160;&#160;3000</td></tr>
+<tr class="memdesc:a04ed8efb76e0f173ffb339d6454780d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo de operación de la puerta en milisegundos.  <br /></td></tr>
+<tr class="separator:a04ed8efb76e0f173ffb339d6454780d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbea41f542642cc0a1d4121ed372a616" id="r_afbea41f542642cc0a1d4121ed372a616"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:afbea41f542642cc0a1d4121ed372a616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de UIDs válidos para acceso.  <br /></td></tr>
+<tr class="separator:afbea41f542642cc0a1d4121ed372a616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9b149a3af4eb3b2fe4364bbd4ebf2a49" id="r_a9b149a3af4eb3b2fe4364bbd4ebf2a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b149a3af4eb3b2fe4364bbd4ebf2a49">inicializar</a> ()</td></tr>
+<tr class="memdesc:a9b149a3af4eb3b2fe4364bbd4ebf2a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa los componentes del sistema.  <br /></td></tr>
+<tr class="separator:a9b149a3af4eb3b2fe4364bbd4ebf2a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3fcfe1a115bb84a2b24ded90471f10" id="r_a5e3fcfe1a115bb84a2b24ded90471f10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e3fcfe1a115bb84a2b24ded90471f10">validateUID</a> (uint8_t *uid, uint8_t size)</td></tr>
+<tr class="memdesc:a5e3fcfe1a115bb84a2b24ded90471f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida un UID de tarjeta RFID.  <br /></td></tr>
+<tr class="separator:a5e3fcfe1a115bb84a2b24ded90471f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed848f114301c5e51f6458d180dc1dd" id="r_afed848f114301c5e51f6458d180dc1dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afed848f114301c5e51f6458d180dc1dd">handleRFIDCard</a> ()</td></tr>
+<tr class="memdesc:afed848f114301c5e51f6458d180dc1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la lectura de una tarjeta/tag:  <br /></td></tr>
+<tr class="separator:afed848f114301c5e51f6458d180dc1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaccfed84cd1498a05ea04a65f1209b1" id="r_afaccfed84cd1498a05ea04a65f1209b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a> (void *param)</td></tr>
+<tr class="memdesc:afaccfed84cd1498a05ea04a65f1209b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función invocada en la interrupción del timer para la medición de concentración de gas, temperatura y humedad. Envía una notificación que es recibida dentro de la tarea correspondiente a medir las condiciones ambientales.  <br /></td></tr>
+<tr class="separator:afaccfed84cd1498a05ea04a65f1209b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac22ee0f4de1e8eb682232f04b2ac1e3c" id="r_ac22ee0f4de1e8eb682232f04b2ac1e3c"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:ac22ee0f4de1e8eb682232f04b2ac1e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle para la tarea de medición.  <br /></td></tr>
+<tr class="separator:ac22ee0f4de1e8eb682232f04b2ac1e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cadd7795814d666f7f16983fe929e0" id="r_a91cadd7795814d666f7f16983fe929e0"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91cadd7795814d666f7f16983fe929e0">alarm_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:a91cadd7795814d666f7f16983fe929e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle para la tarea de alarma.  <br /></td></tr>
+<tr class="separator:a91cadd7795814d666f7f16983fe929e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3157cb680d17c5021fdbef7dc61830c4" id="r_a3157cb680d17c5021fdbef7dc61830c4"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3157cb680d17c5021fdbef7dc61830c4">access_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:a3157cb680d17c5021fdbef7dc61830c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle para la tarea de acceso.  <br /></td></tr>
+<tr class="separator:a3157cb680d17c5021fdbef7dc61830c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc6f8c9074d12d7a44aeb7120c8e2d1" id="r_a5cc6f8c9074d12d7a44aeb7120c8e2d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc6f8c9074d12d7a44aeb7120c8e2d1">permisoPuerta</a> = false</td></tr>
+<tr class="memdesc:a5cc6f8c9074d12d7a44aeb7120c8e2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la puerta puede ser abierta o no.  <br /></td></tr>
+<tr class="separator:a5cc6f8c9074d12d7a44aeb7120c8e2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d497618c58fb371e825af20bd843487" id="r_a9d497618c58fb371e825af20bd843487"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d497618c58fb371e825af20bd843487">abrirPuerta</a> = false</td></tr>
+<tr class="memdesc:a9d497618c58fb371e825af20bd843487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si se debe abrir la puerta o no.  <br /></td></tr>
+<tr class="separator:a9d497618c58fb371e825af20bd843487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4889be39481b89478b39b91317363ad" id="r_ac4889be39481b89478b39b91317363ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4889be39481b89478b39b91317363ad">activarAlarma</a> = false</td></tr>
+<tr class="memdesc:ac4889be39481b89478b39b91317363ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la alarma debe ser activada o no.  <br /></td></tr>
+<tr class="separator:ac4889be39481b89478b39b91317363ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e3892fcc3a812d4589896af4a1c6af" id="r_ab3e3892fcc3a812d4589896af4a1c6af"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3e3892fcc3a812d4589896af4a1c6af">umbral_gas</a> = 25000</td></tr>
+<tr class="memdesc:ab3e3892fcc3a812d4589896af4a1c6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Umbral de concentración de gas butano.  <br /></td></tr>
+<tr class="separator:ab3e3892fcc3a812d4589896af4a1c6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2b619f95deff32a994a519bc390e80" id="r_aab2b619f95deff32a994a519bc390e80"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab2b619f95deff32a994a519bc390e80">umbral_temp</a> = 100</td></tr>
+<tr class="memdesc:aab2b619f95deff32a994a519bc390e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Umbral de temperatura.  <br /></td></tr>
+<tr class="separator:aab2b619f95deff32a994a519bc390e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b3f7edb4c0d81c529828dd2a8b3cdf" id="r_aa5b3f7edb4c0d81c529828dd2a8b3cdf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5b3f7edb4c0d81c529828dd2a8b3cdf">umbral_hum</a> = 100</td></tr>
+<tr class="memdesc:aa5b3f7edb4c0d81c529828dd2a8b3cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Umbral de humedad.  <br /></td></tr>
+<tr class="separator:aa5b3f7edb4c0d81c529828dd2a8b3cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb37380e6d584843a7c0f51ff1249867" id="r_abb37380e6d584843a7c0f51ff1249867"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb37380e6d584843a7c0f51ff1249867">RO_</a> = 0</td></tr>
+<tr class="memdesc:abb37380e6d584843a7c0f51ff1249867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resistencia R0 en aire en condiciones normales del sensor MQ2.  <br /></td></tr>
+<tr class="separator:abb37380e6d584843a7c0f51ff1249867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b27f30508aa42270da1be665629f9d" id="r_a14b27f30508aa42270da1be665629f9d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14b27f30508aa42270da1be665629f9d">valor_gas</a> = 0</td></tr>
+<tr class="memdesc:a14b27f30508aa42270da1be665629f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de gas butano medido.  <br /></td></tr>
+<tr class="separator:a14b27f30508aa42270da1be665629f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09604b37633c4ffe96c2472288adcada" id="r_a09604b37633c4ffe96c2472288adcada"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09604b37633c4ffe96c2472288adcada">valor_gas_convertido</a> = 0</td></tr>
+<tr class="memdesc:a09604b37633c4ffe96c2472288adcada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de gas butano convertido a entero.  <br /></td></tr>
+<tr class="separator:a09604b37633c4ffe96c2472288adcada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d61a35b72d7299eb6b5f48e71a571b" id="r_a24d61a35b72d7299eb6b5f48e71a571b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d61a35b72d7299eb6b5f48e71a571b">temp</a> = 0</td></tr>
+<tr class="memdesc:a24d61a35b72d7299eb6b5f48e71a571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de temperatura medido.  <br /></td></tr>
+<tr class="separator:a24d61a35b72d7299eb6b5f48e71a571b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf120a0718f2ea1552efadd7eebbf2d1" id="r_abf120a0718f2ea1552efadd7eebbf2d1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf120a0718f2ea1552efadd7eebbf2d1">temp_converted</a> = 0</td></tr>
+<tr class="memdesc:abf120a0718f2ea1552efadd7eebbf2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de temperatura convertido a entero.  <br /></td></tr>
+<tr class="separator:abf120a0718f2ea1552efadd7eebbf2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38adb4de3d9d0391675c323d13503af7" id="r_a38adb4de3d9d0391675c323d13503af7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38adb4de3d9d0391675c323d13503af7">hum</a> = 0</td></tr>
+<tr class="memdesc:a38adb4de3d9d0391675c323d13503af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de humedad medido.  <br /></td></tr>
+<tr class="separator:a38adb4de3d9d0391675c323d13503af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0012d923808b21e355ddc6780462b75" id="r_ad0012d923808b21e355ddc6780462b75"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0012d923808b21e355ddc6780462b75">hum_converted</a> = 0</td></tr>
+<tr class="memdesc:ad0012d923808b21e355ddc6780462b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de humedad convertido a entero.  <br /></td></tr>
+<tr class="separator:ad0012d923808b21e355ddc6780462b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6465c2a35bd14b1d5c2f00a92e1b1b0e" id="r_a6465c2a35bd14b1d5c2f00a92e1b1b0e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6465c2a35bd14b1d5c2f00a92e1b1b0e">last_user_ID</a></td></tr>
+<tr class="memdesc:a6465c2a35bd14b1d5c2f00a92e1b1b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Último ID de usuario leído.  <br /></td></tr>
+<tr class="separator:a6465c2a35bd14b1d5c2f00a92e1b1b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa110ec28a27f16556a13c723b22901" id="r_a7fa110ec28a27f16556a13c723b22901"><td class="memItemLeft" align="right" valign="top">MFRC522Ptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fa110ec28a27f16556a13c723b22901">mfrcInstance</a></td></tr>
+<tr class="memdesc:a7fa110ec28a27f16556a13c723b22901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancia del lector RFID.  <br /></td></tr>
+<tr class="separator:a7fa110ec28a27f16556a13c723b22901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e9b93058bbe1db35570cd4c7c216af" id="r_a31e9b93058bbe1db35570cd4c7c216af"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31e9b93058bbe1db35570cd4c7c216af">valid_uids</a> [<a class="el" href="#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a>][4]</td></tr>
+<tr class="memdesc:a31e9b93058bbe1db35570cd4c7c216af"><td class="mdescLeft">&#160;</td><td class="mdescRight">UIDs válidos para acceso.  <br /></td></tr>
+<tr class="separator:a31e9b93058bbe1db35570cd4c7c216af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="ac0b7d7cf0b923620e100e4884d361031" name="ac0b7d7cf0b923620e100e4884d361031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b7d7cf0b923620e100e4884d361031">&#9670;&#160;</a></span>CONFIG_ACCESS_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_ACCESS_PERIOD&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período de chequeo del acceso en milisegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00084">84</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a440e4a35d8c6e448851d42a56bde8f72" name="a440e4a35d8c6e448851d42a56bde8f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440e4a35d8c6e448851d42a56bde8f72">&#9670;&#160;</a></span>CONFIG_ALARM_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_ALARM_PERIOD&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período de chequeo de la alarma en milisegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00080">80</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a9a265a2fa8b8a1442be25098dec84dac" name="a9a265a2fa8b8a1442be25098dec84dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a265a2fa8b8a1442be25098dec84dac">&#9670;&#160;</a></span>CONFIG_MEASURE_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_MEASURE_PERIOD&#160;&#160;&#160;2000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período de medición en microsegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00076">76</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="afbea41f542642cc0a1d4121ed372a616" name="afbea41f542642cc0a1d4121ed372a616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbea41f542642cc0a1d4121ed372a616">&#9670;&#160;</a></span>NUM_UIDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_UIDS&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Número de UIDs válidos para acceso. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00093">93</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00433">validateUID()</a>.</p>
+
+</div>
+</div>
+<a id="a04ed8efb76e0f173ffb339d6454780d9" name="a04ed8efb76e0f173ffb339d6454780d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ed8efb76e0f173ffb339d6454780d9">&#9670;&#160;</a></span>OPER_DOOR_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPER_DOOR_PERIOD&#160;&#160;&#160;3000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tiempo de operación de la puerta en milisegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00089">89</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00345">345</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00106">access_task_handle</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00102">alarm_task_handle</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00076">CONFIG_MEASURE_PERIOD</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00210">FuncTimerA()</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00365">inicializar()</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00098">measure_task_handle</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a> y <a class="el" href="timer__mcu_8c_source.html#l00110">TimerStart()</a>.</p>
+
+</div>
+</div>
+<a id="afaccfed84cd1498a05ea04a65f1209b1" name="afaccfed84cd1498a05ea04a65f1209b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaccfed84cd1498a05ea04a65f1209b1">&#9670;&#160;</a></span>FuncTimerA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerA </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función invocada en la interrupción del timer para la medición de concentración de gas, temperatura y humedad. Envía una notificación que es recibida dentro de la tarea correspondiente a medir las condiciones ambientales. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00210">210</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00098">measure_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="afed848f114301c5e51f6458d180dc1dd" name="afed848f114301c5e51f6458d180dc1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed848f114301c5e51f6458d180dc1dd">&#9670;&#160;</a></span>handleRFIDCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleRFIDCard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maneja la lectura de una tarjeta/tag: </p>
+<ul>
+<li>Muestra el UID de la tarjeta leída a través del puerto UART.</li>
+<li>Convierte el UID en un identificador de usuario.</li>
+<li>Valida el UID contra una lista de UIDs válidos.</li>
+<li>Controla el acceso permitiendo o denegando la apertura de la puerta. </li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00397">397</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00115">abrirPuerta</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00168">last_user_ID</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00172">mfrcInstance</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00111">permisoPuerta</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00222">UartItoa()</a>, <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00433">validateUID()</a>.</p>
+
+</div>
+</div>
+<a id="a9b149a3af4eb3b2fe4364bbd4ebf2a49" name="a9b149a3af4eb3b2fe4364bbd4ebf2a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b149a3af4eb3b2fe4364bbd4ebf2a49">&#9670;&#160;</a></span>inicializar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inicializar </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa los componentes del sistema. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00365">365</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8h_source.html#l00052">GPIO_0</a>, <a class="el" href="gpio__mcu_8h_source.html#l00053">GPIO_1</a>, <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00075">GPIO_23</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00172">mfrcInstance</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00137">RO_</a>, <a class="el" href="servo__sg90_8h_source.html#l00032">SERVO_0</a>, <a class="el" href="servo__sg90_8c_source.html#l00033">ServoInit()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a5e3fcfe1a115bb84a2b24ded90471f10" name="a5e3fcfe1a115bb84a2b24ded90471f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3fcfe1a115bb84a2b24ded90471f10">&#9670;&#160;</a></span>validateUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validateUID </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>uid</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valida un UID de tarjeta RFID. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uid</td><td>Puntero al array que contiene el UID de la tarjeta. </td></tr>
+    <tr><td class="paramname">size</td><td>Tamaño del UID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true Si el UID es válido. </dd>
+<dd>
+false Si el UID no es válido. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00433">433</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00093">NUM_UIDS</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00177">valid_uids</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00397">handleRFIDCard()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a9d497618c58fb371e825af20bd843487" name="a9d497618c58fb371e825af20bd843487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d497618c58fb371e825af20bd843487">&#9670;&#160;</a></span>abrirPuerta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool abrirPuerta = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si se debe abrir la puerta o no. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00115">115</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00397">handleRFIDCard()</a>.</p>
+
+</div>
+</div>
+<a id="a3157cb680d17c5021fdbef7dc61830c4" name="a3157cb680d17c5021fdbef7dc61830c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3157cb680d17c5021fdbef7dc61830c4">&#9670;&#160;</a></span>access_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t access_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle para la tarea de acceso. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00106">106</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ac4889be39481b89478b39b91317363ad" name="ac4889be39481b89478b39b91317363ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4889be39481b89478b39b91317363ad">&#9670;&#160;</a></span>activarAlarma</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool activarAlarma = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si la alarma debe ser activada o no. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00119">119</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a91cadd7795814d666f7f16983fe929e0" name="a91cadd7795814d666f7f16983fe929e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91cadd7795814d666f7f16983fe929e0">&#9670;&#160;</a></span>alarm_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t alarm_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle para la tarea de alarma. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00102">102</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a38adb4de3d9d0391675c323d13503af7" name="a38adb4de3d9d0391675c323d13503af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38adb4de3d9d0391675c323d13503af7">&#9670;&#160;</a></span>hum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hum = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de humedad medido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00158">158</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="ad0012d923808b21e355ddc6780462b75" name="ad0012d923808b21e355ddc6780462b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0012d923808b21e355ddc6780462b75">&#9670;&#160;</a></span>hum_converted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t hum_converted = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de humedad convertido a entero. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00162">162</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a6465c2a35bd14b1d5c2f00a92e1b1b0e" name="a6465c2a35bd14b1d5c2f00a92e1b1b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6465c2a35bd14b1d5c2f00a92e1b1b0e">&#9670;&#160;</a></span>last_user_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int last_user_ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Último ID de usuario leído. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00168">168</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00397">handleRFIDCard()</a>.</p>
+
+</div>
+</div>
+<a id="ac22ee0f4de1e8eb682232f04b2ac1e3c" name="ac22ee0f4de1e8eb682232f04b2ac1e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22ee0f4de1e8eb682232f04b2ac1e3c">&#9670;&#160;</a></span>measure_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t measure_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle para la tarea de medición. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00098">98</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00345">app_main()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00210">FuncTimerA()</a>.</p>
+
+</div>
+</div>
+<a id="a7fa110ec28a27f16556a13c723b22901" name="a7fa110ec28a27f16556a13c723b22901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa110ec28a27f16556a13c723b22901">&#9670;&#160;</a></span>mfrcInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MFRC522Ptr_t mfrcInstance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instancia del lector RFID. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00172">172</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00397">handleRFIDCard()</a> y <a class="el" href="_proyecto___integrador_8c_source.html#l00365">inicializar()</a>.</p>
+
+</div>
+</div>
+<a id="a5cc6f8c9074d12d7a44aeb7120c8e2d1" name="a5cc6f8c9074d12d7a44aeb7120c8e2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc6f8c9074d12d7a44aeb7120c8e2d1">&#9670;&#160;</a></span>permisoPuerta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool permisoPuerta = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si la puerta puede ser abierta o no. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00111">111</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00397">handleRFIDCard()</a>.</p>
+
+</div>
+</div>
+<a id="abb37380e6d584843a7c0f51ff1249867" name="abb37380e6d584843a7c0f51ff1249867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb37380e6d584843a7c0f51ff1249867">&#9670;&#160;</a></span>RO_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RO_ = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resistencia R0 en aire en condiciones normales del sensor MQ2. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00137">137</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00365">inicializar()</a>.</p>
+
+</div>
+</div>
+<a id="a24d61a35b72d7299eb6b5f48e71a571b" name="a24d61a35b72d7299eb6b5f48e71a571b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d61a35b72d7299eb6b5f48e71a571b">&#9670;&#160;</a></span>temp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temp = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de temperatura medido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00150">150</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="abf120a0718f2ea1552efadd7eebbf2d1" name="abf120a0718f2ea1552efadd7eebbf2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf120a0718f2ea1552efadd7eebbf2d1">&#9670;&#160;</a></span>temp_converted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t temp_converted = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de temperatura convertido a entero. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00154">154</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="ab3e3892fcc3a812d4589896af4a1c6af" name="ab3e3892fcc3a812d4589896af4a1c6af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e3892fcc3a812d4589896af4a1c6af">&#9670;&#160;</a></span>umbral_gas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t umbral_gas = 25000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Umbral de concentración de gas butano. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00124">124</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="aa5b3f7edb4c0d81c529828dd2a8b3cdf" name="aa5b3f7edb4c0d81c529828dd2a8b3cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b3f7edb4c0d81c529828dd2a8b3cdf">&#9670;&#160;</a></span>umbral_hum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t umbral_hum = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Umbral de humedad. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00132">132</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="aab2b619f95deff32a994a519bc390e80" name="aab2b619f95deff32a994a519bc390e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2b619f95deff32a994a519bc390e80">&#9670;&#160;</a></span>umbral_temp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t umbral_temp = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Umbral de temperatura. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00128">128</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a31e9b93058bbe1db35570cd4c7c216af" name="a31e9b93058bbe1db35570cd4c7c216af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e9b93058bbe1db35570cd4c7c216af">&#9670;&#160;</a></span>valid_uids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t valid_uids[<a class="el" href="#afbea41f542642cc0a1d4121ed372a616">NUM_UIDS</a>][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= </div>
+<div class="line">{</div>
+<div class="line">    {0xd3, 0x1c, 0xe9, 0xfc},</div>
+<div class="line">    {0Xf6, 0x84, 0x19, 0x9e},</div>
+<div class="line">    {0x83, 0x33, 0xbd, 0xb}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>UIDs válidos para acceso. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00177">177</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00433">validateUID()</a>.</p>
+
+</div>
+</div>
+<a id="a14b27f30508aa42270da1be665629f9d" name="a14b27f30508aa42270da1be665629f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b27f30508aa42270da1be665629f9d">&#9670;&#160;</a></span>valor_gas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float valor_gas = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de gas butano medido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00141">141</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a09604b37633c4ffe96c2472288adcada" name="a09604b37633c4ffe96c2472288adcada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09604b37633c4ffe96c2472288adcada">&#9670;&#160;</a></span>valor_gas_convertido</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t valor_gas_convertido = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de gas butano convertido a entero. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00145">145</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_8c80e9c9e13c9759df76f70fac32e526.html">Gaggiamo-1C-2024</a></li><li class="navelem"><a class="el" href="dir_afed1d8076739dd758196f660fe62cae.html">firmware</a></li><li class="navelem"><a class="el" href="dir_497fe04a80b3bb951bd27af1e74cd047.html">projects</a></li><li class="navelem"><a class="el" href="dir_54bb6f1e1d661b43255fd759e0953a2c.html">Proyecto_Integrador</a></li><li class="navelem"><a class="el" href="dir_df3ee2a240bf1d1a86a4a644372fb15b.html">main</a></li><li class="navelem"><a class="el" href="_proyecto___integrador_8c.html">Proyecto_Integrador.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
