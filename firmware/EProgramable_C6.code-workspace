@@ -38,6 +38,9 @@
         },
         {
             "path": "projects/Proyecto_Integrador"
+        },
+        {
+            "path": "projects/Recuperatorio"
         }
     ],
     "settings": {

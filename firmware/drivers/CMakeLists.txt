@@ -25,6 +25,9 @@ set(srcs
     "devices/src/dht11.c"
     "devices/src/mq2.c"
     "devices/src/buzzer.c"
+    "devices/src/mfrc522.c"
+    "devices/src/rfid_utils.c"
+    "devices/src/Si7007.c"
     )
 
 # Always included headers
